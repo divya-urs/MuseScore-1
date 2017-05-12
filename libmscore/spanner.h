@@ -86,8 +86,8 @@ class SpannerSegment : public Element {
       virtual void setVisible(bool f) override;
       virtual void setColor(const QColor& col) override;
 
-      virtual Element* nextElement() override;
-      virtual Element* prevElement() override;
+      virtual Element* nextSegmentElement() override;
+      virtual Element* prevSegmentElement() override;
       virtual bool isSpannerSegment() const override { return true; }
       virtual QString accessibleInfo() const override;
       virtual void styleChanged() override;
@@ -211,8 +211,8 @@ class Spanner : public Element {
       virtual void setSelected(bool f) override;
       virtual void setVisible(bool f) override;
       virtual void setColor(const QColor& col) override;
-      virtual Element* nextElement() override;
-      virtual Element* prevElement() override;
+      virtual Element* nextSegmentElement() override;
+      virtual Element* prevSegmentElement() override;
 
       virtual bool isSpanner() const override { return true; }
 

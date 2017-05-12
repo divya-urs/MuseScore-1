@@ -818,7 +818,7 @@ Shortcut Shortcut::_sc[] = {
       {
          MsWidget::SCORE_TAB,
          STATE_NORMAL,
-         "next-element",
+         "next-segment-element",
          QT_TRANSLATE_NOOP("action","Next Element"),
          QT_TRANSLATE_NOOP("action","Accessibility: Next element"),
          QT_TRANSLATE_NOOP("action","Accessibility: Next element"),
@@ -829,7 +829,7 @@ Shortcut Shortcut::_sc[] = {
       {
          MsWidget::SCORE_TAB,
          STATE_NORMAL,
-         "prev-element",
+         "prev-segment-element",
          QT_TRANSLATE_NOOP("action","Previous Element"),
          QT_TRANSLATE_NOOP("action","Accessibility: Previous element"),
          QT_TRANSLATE_NOOP("action","Accessibility: Previous element"),

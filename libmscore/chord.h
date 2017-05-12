@@ -219,8 +219,8 @@ class Chord : public ChordRest {
 
       Chord* nextTiedChord(bool backwards = false, bool sameSize = true);
 
-      virtual Element* nextElement() override;
-      virtual Element* prevElement() override;
+      virtual Element* nextSegmentElement() override;
+      virtual Element* prevSegmentElement() override;
       virtual QString accessibleExtraInfo() const override;
 
       virtual Shape shape() const override;

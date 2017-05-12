@@ -2857,33 +2857,33 @@ QString Note::subtypeName() const
       }
 
 //---------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //---------------------------------------------------------
 
-Element* Note::nextElement()
+Element* Note::nextSegmentElement()
       {
       if (chord()->isGrace())
-            return Element::nextElement();
+            return Element::nextSegmentElement();
 
       const std::vector<Note*>& notes = chord()->notes();
       if (this == notes.front())
-            return chord()->nextElement();
+            return chord()->nextSegmentElement();
       auto i = std::find(notes.begin(), notes.end(), this);
       return *(i-1);
       }
 
 //---------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //---------------------------------------------------------
 
-Element* Note::prevElement()
+Element* Note::prevSegmentElement()
       {
       if (chord()->isGrace())
-            return Element::prevElement();
+            return Element::prevSegmentElement();
 
       const std::vector<Note*>& notes = chord()->notes();
       if (this == notes.back())
-            return chord()->prevElement();
+            return chord()->prevSegmentElement();
       auto i = std::find(notes.begin(), notes.end(), this);
       return *++i;
       }

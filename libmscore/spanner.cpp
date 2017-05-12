@@ -190,21 +190,21 @@ void SpannerSegment::setColor(const QColor& col)
       }
 
 //---------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //---------------------------------------------------------
 
-Element* SpannerSegment::nextElement()
+Element* SpannerSegment::nextSegmentElement()
       {
-      return spanner()->nextElement();
+      return spanner()->nextSegmentElement();
       }
 
 //---------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //---------------------------------------------------------
 
-Element* SpannerSegment::prevElement()
+Element* SpannerSegment::prevSegmentElement()
       {
-      return spanner()->prevElement();
+      return spanner()->prevSegmentElement();
       }
 
 //---------------------------------------------------------
@@ -849,10 +849,10 @@ void Spanner::setEndElement(Element* e)
       }
 
 //---------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //---------------------------------------------------------
 
-Element* Spanner::nextElement()
+Element* Spanner::nextSegmentElement()
       {
       Segment* s = startSegment();
       if (s)
@@ -861,10 +861,10 @@ Element* Spanner::nextElement()
       }
 
 //---------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //---------------------------------------------------------
 
-Element* Spanner::prevElement()
+Element* Spanner::prevSegmentElement()
       {
       Segment* s = endSegment();
       if (s)

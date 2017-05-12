@@ -2934,10 +2934,10 @@ qreal Measure::userStretch() const
       }
 
 //---------------------------------------------------------
-//   nextElementStaff
+//   nextSegmentElementStaff
 //---------------------------------------------------------
 
-Element* Measure::nextElementStaff(int staff)
+Element* Measure::nextSegmentElementStaff(int staff)
       {
       Segment* firstSeg = segments().first();
       if (firstSeg)
@@ -2946,10 +2946,10 @@ Element* Measure::nextElementStaff(int staff)
       }
 
 //---------------------------------------------------------
-//   prevElementStaff
+//   prevSegmentElementStaff
 //---------------------------------------------------------
 
-Element* Measure::prevElementStaff(int staff)
+Element* Measure::prevSegmentElementStaff(int staff)
       {
       Measure* prevM = prevMeasureMM();
       if (prevM) {

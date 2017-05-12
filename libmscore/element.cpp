@@ -1581,14 +1581,14 @@ bool Element::concertPitch() const
       }
 
 //------------------------------------------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //   This function is used in for the next-element command to navigate between main elements
 //   of segments. (Note, Rest, Clef, Time Signature, Key Signature, Barline, Ambitus, Breath, etc.)
 //   The default implementation is to look for the first such element. After it is found each
 //   element knows how to find the next one and overrides this method
 //------------------------------------------------------------------------------------------
 
-Element* Element::nextElement()
+Element* Element::nextSegmentElement()
       {
       Element* p = this;
       while (p) {
@@ -1611,11 +1611,11 @@ Element* Element::nextElement()
                         }
                   case ElementType::MEASURE: {
                         Measure* m = static_cast<Measure*>(p);
-                        return m->nextElementStaff(staffIdx());
+                        return m->nextSegmentElementStaff(staffIdx());
                         }
                   case ElementType::SYSTEM: {
                         System* sys = static_cast<System*>(p);
-                        return sys->nextElement();
+                        return sys->nextSegmentElement();
                         }
                   default:
                         break;
@@ -1626,14 +1626,14 @@ Element* Element::nextElement()
       }
 
 //------------------------------------------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //   This function is used in for the prev-element command to navigate between main elements
 //   of segments. (Note, Rest, Clef, Time Signature, Key Signature, Barline, Ambitus, Breath, etc.)
 //   The default implementation is to look for the first such element. After it is found each
 //   element knows how to find the previous one and overrides this method
 //------------------------------------------------------------------------------------------
 
-Element* Element::prevElement()
+Element* Element::prevSegmentElement()
       {
       Element* p = this;
       while (p) {
@@ -1656,11 +1656,11 @@ Element* Element::prevElement()
                         }
                   case ElementType::MEASURE: {
                         Measure* m = static_cast<Measure*>(p);
-                        return m->prevElementStaff(staffIdx());
+                        return m->prevSegmentElementStaff(staffIdx());
                         }
                   case ElementType::SYSTEM: {
                         System* sys = static_cast<System*>(p);
-                        return sys->prevElement();
+                        return sys->prevSegmentElement();
                         }
                   default:
                         break;

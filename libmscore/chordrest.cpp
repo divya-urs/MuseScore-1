@@ -1227,19 +1227,19 @@ void ChordRest::processSiblings(std::function<void(Element*)> func)
       }
 
 //---------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //---------------------------------------------------------
 
-Element* ChordRest::nextElement()
+Element* ChordRest::nextSegmentElement()
       {
       return segment()->firstInNextSegments(staffIdx());
       }
 
 //---------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //---------------------------------------------------------
 
-Element* ChordRest::prevElement()
+Element* ChordRest::prevSegmentElement()
       {
       return segment()->lastInPrevSegments(staffIdx());
       }

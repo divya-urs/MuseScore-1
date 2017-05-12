@@ -1926,23 +1926,23 @@ void ScoreView::cmd(const QAction* a)
             if (el && el->type() == ElementType::NOTE)
                   cmdGotoElement(score()->downAltCtrl(static_cast<Note*>(el)));
             }
-      else if (cmd == "next-element"){
+      else if (cmd == "next-segment-element"){
             Element* el = score()->selection().element();
             if (!el && !score()->selection().elements().isEmpty() )
                 el = score()->selection().elements().first();
 
             if (el)
-                  cmdGotoElement(el->nextElement());
+                  cmdGotoElement(el->nextSegmentElement());
             else
                   cmdGotoElement(score()->firstElement());
             }
-      else if (cmd == "prev-element"){
+      else if (cmd == "prev-segment-element"){
             Element* el = score()->selection().element();
             if (!el && !score()->selection().elements().isEmpty())
                 el = score()->selection().elements().last();
 
             if (el)
-                  cmdGotoElement(el->prevElement());
+                  cmdGotoElement(el->prevSegmentElement());
             else
                   cmdGotoElement(score()->lastElement());
             }

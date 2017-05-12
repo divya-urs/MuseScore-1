@@ -3169,10 +3169,10 @@ TremoloChordType Chord::tremoloChordType() const
 
 
 //---------------------------------------------------------
-//   nextElement
+//   nextSegmentElement
 //---------------------------------------------------------
 
-Element* Chord::nextElement()
+Element* Chord::nextSegmentElement()
       {
       for (int v = track() + 1; staffIdx() == v/VOICES; ++v) {
             Element* e = segment()->element(v);
@@ -3184,14 +3184,14 @@ Element* Chord::nextElement()
                   }
             }
 
-      return ChordRest::nextElement();
+      return ChordRest::nextSegmentElement();
       }
 
 //---------------------------------------------------------
-//   prevElement
+//   prevSegmentElement
 //---------------------------------------------------------
 
-Element* Chord::prevElement()
+Element* Chord::prevSegmentElement()
       {
       for (int v = track() - 1; staffIdx() == v/VOICES; --v) {
             Element* e = segment()->element(v);
@@ -3202,7 +3202,7 @@ Element* Chord::prevElement()
                   return e;
                   }
             }
-      return ChordRest::prevElement();
+      return ChordRest::prevSegmentElement();
       }
 
 //---------------------------------------------------------

@@ -439,8 +439,8 @@ class Element : public ScoreElement {
 
       bool concertPitch() const;
 
-      virtual Element* nextElement();  //< Used for navigation
-      virtual Element* prevElement();  //< next-element and prev-element command
+      virtual Element* nextSegmentElement();  //< Used for navigation
+      virtual Element* prevSegmentElement();  //< next-element and prev-element command
 
       virtual QString accessibleInfo() const;         //< used to populate the status bar
       virtual QString screenReaderInfo() const  {     //< by default returns accessibleInfo, but can be overriden
