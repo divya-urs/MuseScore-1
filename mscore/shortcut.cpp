@@ -820,8 +820,8 @@ Shortcut Shortcut::_sc[] = {
          STATE_NORMAL,
          "next-segment-element",
          QT_TRANSLATE_NOOP("action","Next Element"),
-         QT_TRANSLATE_NOOP("action","Accessibility: Next element"),
-         QT_TRANSLATE_NOOP("action","Accessibility: Next element"),
+         QT_TRANSLATE_NOOP("action","Accessibility: Next segment element"),
+         QT_TRANSLATE_NOOP("action","Accessibility: Next segment element"),
          Icons::Invalid_ICON,
          Qt::WindowShortcut,
          ShortcutFlags::A_CMD
@@ -831,8 +831,8 @@ Shortcut Shortcut::_sc[] = {
          STATE_NORMAL,
          "prev-segment-element",
          QT_TRANSLATE_NOOP("action","Previous Element"),
-         QT_TRANSLATE_NOOP("action","Accessibility: Previous element"),
-         QT_TRANSLATE_NOOP("action","Accessibility: Previous element"),
+         QT_TRANSLATE_NOOP("action","Accessibility: Previous segment element"),
+         QT_TRANSLATE_NOOP("action","Accessibility: Previous segment element"),
          Icons::Invalid_ICON,
          Qt::WindowShortcut,
          ShortcutFlags::A_CMD

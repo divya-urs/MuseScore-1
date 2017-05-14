@@ -248,8 +248,8 @@ class Measure : public MeasureBase {
       Measure* mmRestFirst() const;
       Measure* mmRestLast() const;
 
-      Element* nextSegmentElementStaff(int staff);
-      Element* prevSegmentElementStaff(int staff);
+      Element* nextElementStaff(int staff);
+      Element* prevElementStaff(int staff);
       virtual QString accessibleInfo() const override;
 
       void addSystemHeader(bool firstSystem);

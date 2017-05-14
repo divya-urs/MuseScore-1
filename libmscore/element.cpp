@@ -1611,7 +1611,7 @@ Element* Element::nextSegmentElement()
                         }
                   case ElementType::MEASURE: {
                         Measure* m = static_cast<Measure*>(p);
-                        return m->nextSegmentElementStaff(staffIdx());
+                        return m->nextElementStaff(staffIdx());
                         }
                   case ElementType::SYSTEM: {
                         System* sys = static_cast<System*>(p);
@@ -1656,7 +1656,7 @@ Element* Element::prevSegmentElement()
                         }
                   case ElementType::MEASURE: {
                         Measure* m = static_cast<Measure*>(p);
-                        return m->prevSegmentElementStaff(staffIdx());
+                        return m->prevElementStaff(staffIdx());
                         }
                   case ElementType::SYSTEM: {
                         System* sys = static_cast<System*>(p);
