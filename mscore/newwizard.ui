@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="title">
+    <widget class="Ms::AccessibleLineEdit" name="title">
      <property name="accessibleName">
       <string>Title</string>
      </property>
@@ -114,6 +114,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Ms::AccessibleLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>accessiblelineedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
